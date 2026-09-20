@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="SpendWise is a calm, private expense tracker for everyday decisions.">
+  <link rel="stylesheet" href="styles.css">
+  <title>SpendWise | Expense tracker</title>
+</head>
+<body>
+  <div id="toast" class="toast" role="status"></div>
+  <section id="introView" class="intro-shell hidden">
+    <div class="intro-orb orb-one"></div><div class="intro-orb orb-two"></div>
+    <div class="intro-content">
+      <div class="brand-mark">S</div>
+      <p class="eyebrow">WELCOME TO SPENDWISE</p>
+      <h1>Money habits,<br><span>made lighter.</span></h1>
+      <p class="muted">A private, thoughtful space to see your spending clearly and move toward your goals.</p>
+      <div class="intro-dots"><i class="active"></i><i></i><i></i></div>
+      <button id="startApp" class="primary wide">Get started <span>→</span></button>
+    </div>
+  </section>
+  <section id="authView" class="auth-shell">
+    <div class="auth-art">
+      <div class="brand-mark">S</div>
+      <p class="eyebrow">YOUR MONEY, CLEARER</p>
+      <h1>Small habits.<br><span>Big clarity.</span></h1>
+      <p class="muted">Track spending, plan with confidence, and make room for what matters.</p>
+      <div class="quote-card">
+        <span class="quote-icon">“</span>
+        <p>A budget is telling your money where to go instead of wondering where it went.</p>
+      </div>
+    </div>
+    <div class="auth-card">
+      <div class="brand-lockup"><div class="brand-mark small">S</div><strong>SpendWise</strong></div>
+      <div class="auth-tabs"><button class="tab active" data-auth="login">Log in</button><button class="tab" data-auth="register">Create account</button></div>
+      <form id="authForm">
+        <label id="nameField" class="hidden">Your name<input id="nameInput" type="text" placeholder="Alex Morgan"></label>
+        <label>Email<input id="emailInput" type="email" placeholder="you@example.com" required></label>
+        <label>Password<input id="passwordInput" type="password" placeholder="At least 6 characters" minlength="6" required></label>
+        <button class="primary wide" type="submit"><span id="authSubmit">Continue</span><span>→</span></button>
+      </form>
+      <button id="demoLogin" class="text-button">Try the demo account</button>
+      <p class="fine-print">By continuing, you agree to our Terms and Privacy Policy.</p>
+    </div>
+  </section>
+
+  <div id="appView" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand-lockup"><div class="brand-mark small">S</div><strong>SpendWise</strong></div>
+      <nav class="side-nav">
+        <button class="nav-item active" data-page="overview"><span>◈</span> Overview</button>
+        <button class="nav-item" data-page="transactions"><span>↔</span> Transactions</button>
+        <button class="nav-item" data-page="budgets"><span>◒</span> Budgets</button>
+        <button class="nav-item" data-page="insights"><span>✦</span> Insights</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+        <div class="profile-mini"><div id="avatar" class="avatar">AM</div><div><strong id="sideName">Alex Morgan</strong><small id="sideEmail">alex@example.com</small></div><button id="logout" aria-label="Log out">↗</button></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <button id="menuButton" class="icon-button mobile-only">☰</button>
+        <div><p class="eyebrow" id="pageKicker">MONDAY, OCTOBER 14</p><h2 id="pageTitle">Good morning, Alex</h2></div>
+        <div class="top-actions"><button id="currencyButton" class="pill-button">INR <span>₹</span></button><button id="mobileProfile" class="avatar">AM</button></div>
+      </header>
+      <div id="pageContent"></div>
+    </main>
+  </div>
+
+  <div id="transactionModal" class="modal-backdrop hidden">
+    <div class="modal">
+      <div class="modal-head"><div><p class="eyebrow">MONEY MOVEMENT</p><h3 id="modalTitle">Add transaction</h3></div><button class="close-modal">×</button></div>
+      <form id="transactionForm">
+        <input type="hidden" id="transactionId">
+        <div class="type-toggle"><button type="button" class="active" data-type="expense">Expense</button><button type="button" data-type="income">Income</button></div>
+        <label>Amount<input id="amountInput" type="number" min="0.01" step="0.01" placeholder="0.00" required></label>
+        <div class="form-grid"><label>Category<select id="categoryInput"><option>Food</option><option>Transport</option><option>Housing</option><option>Shopping</option><option>Health</option><option>Entertainment</option><option>Salary</option><option>Other</option></select></label><label>Date<input id="dateInput" type="date" required></label></div>
+        <label>Note<input id="noteInput" type="text" placeholder="What was this for?"></label>
+        <button class="primary wide" type="submit">Save transaction <span>→</span></button>
+      </form>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
