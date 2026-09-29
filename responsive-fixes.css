@@ -1,0 +1,61 @@
+.modal-backdrop {
+  overflow-y: auto;
+}
+
+.modal {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+@media (max-height: 600px) and (min-width: 651px) {
+  .auth-shell {
+    min-height: 100dvh;
+    height: auto;
+    align-items: start;
+  }
+
+  .auth-art {
+    min-height: 100dvh;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .auth-art h1 {
+    margin: 24px 0 14px;
+  }
+
+  .quote-card {
+    display: none;
+  }
+
+  .auth-card {
+    align-self: start;
+    margin: 8px auto;
+    padding: 18px;
+  }
+
+  .auth-tabs {
+    margin: 18px 0 14px;
+  }
+
+  label {
+    margin: 10px 0;
+  }
+
+  input,
+  select {
+    padding: 10px 12px;
+  }
+
+  .wide {
+    margin-top: 10px;
+  }
+
+  .text-button {
+    margin: 10px auto;
+  }
+
+  .fine-print {
+    margin-top: 16px;
+  }
+}

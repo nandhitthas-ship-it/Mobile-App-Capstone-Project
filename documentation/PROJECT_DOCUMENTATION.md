@@ -125,7 +125,7 @@ classDiagram
 ## Deployment runbook
 
 1. Push the folder to a GitHub repository.
-2. Import the repository into Vercel or Netlify with no build command and `.` as the output directory.
+2. Import the repository into Vercel. Build command: `npm run build`; output directory: `dist` (configured in `vercel.json`).
 3. Replace the Live Website URL in `README.md`.
 4. Capture mobile screenshots into `screenshots/`.
 5. Add Firebase config via environment variables and deploy security rules.

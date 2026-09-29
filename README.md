@@ -4,7 +4,7 @@ SpendWise is a calm, mobile-first expense tracker that helps students and young 
 
 ## Live website
 
-**Live Website:** `https://your-project-name.vercel.app` *(replace after deploying this folder to Vercel, Netlify, or GitHub Pages)*
+**Live Website:** https://mobile-app-capstone-project.vercel.app
 
 **Demo video:** `https://your-video-link.example` *(replace with the recorded 3–5 minute walkthrough)*
 
@@ -25,16 +25,16 @@ People often make financial decisions from incomplete memory. Existing tools can
 
 ## Technology stack
 
-HTML5, CSS3, modern JavaScript, Web Storage API, Notifications API, Media Capture input, Fetch API, and a static hosting target such as Vercel. The project is intentionally dependency-light so it can be opened immediately or wrapped by Capacitor/Expo for an APK.
+Vite, HTML5, CSS3, modern JavaScript, Web Storage API, Notifications API, Media Capture input, Fetch API, and Vercel static hosting. The app is intentionally dependency-light and can also be wrapped by Capacitor for an APK.
 
 ## Run locally
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
-`npm start` starts the server at `http://localhost:4173` and opens that URL automatically. Or open `index.html` directly in a browser. `npm test` runs a syntax check. For live API and camera behavior, use the local server because browser permissions may be restricted from `file://`.
+`npm run dev` starts Vite and opens the local app automatically (usually `http://localhost:5173`). `npm start` is an alias for the same command. `npm run build` creates the production site in `dist`; `npm run preview` serves that build locally. `npm test` runs a JavaScript syntax check.
 
 Use the **Try the demo account** button, or create a local account. No real credentials are bundled.
 
@@ -88,7 +88,7 @@ Build `app-release.apk` from Android Studio after adding Firebase config and tes
 
 ## Links to complete before submission
 
-- **GitHub repository:** `https://github.com/your-user/spendwise`
-- **APK download:** `https://your-host.example/app-release.apk`
-- **Live website:** `https://your-project-name.vercel.app`
-- **Demo video:** `https://your-video-link.example`
+- **GitHub repository:** https://github.com/nandhitthas-ship-it/Mobile-App-Capstone-Project
+- **APK download:** Not built yet; follow the Capacitor/Android build steps above.
+- **Live website:** https://mobile-app-capstone-project.vercel.app
+- **Demo video:** Not recorded/uploaded yet.

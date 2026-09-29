@@ -5,10 +5,10 @@
   "description": "SpendWise mobile-first application",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite",
-    "preview": "vite preview",
-    "start": "node server.js",
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview --open",
+    "start": "vite --open",
     "test": "node --check app.js"
   },
   "devDependencies": {
